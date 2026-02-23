@@ -14,7 +14,7 @@ formulario.addEventListener('submit', function(event) {
         // Asignar una clase al nuevo elemento div para aplicar estilos CSS
         comentarioBox.id = 'comentario-box';
         // Asignar el texto del comentario al nuevo elemento div
-        comentarioBox.textContent = comentario;
+        comentarioBox.textContent = comentario + ' - ' + new Date().toLocaleString();
         // Asiganr un Boton para eliminar el comentario
         let botonEliminar = document.createElement('button');
         botonEliminar.textContent = 'Eliminar';
