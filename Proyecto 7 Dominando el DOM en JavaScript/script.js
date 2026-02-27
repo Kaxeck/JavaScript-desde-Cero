@@ -105,9 +105,12 @@ const fuerza_password = (lowercase, uppercase, numbers, symbols) => {
     }
     // Cambio de texto según la fuerza de la contraseña
     const strength_text = document.querySelector(".strength-text")
-    if (fuerza === 1) {
-        strength_text.textContent = "DEBIL"
+    if (fuerza === 0) {
+        strength_text.textContent = ""
     } 
+    else if (fuerza === 1) {
+        strength_text.textContent = "MUY DÉBIL"
+    }
     else if (fuerza === 2) {
         strength_text.textContent = "MEDIA"
     } 
@@ -123,7 +126,19 @@ const fuerza_password = (lowercase, uppercase, numbers, symbols) => {
 password_range.addEventListener("input", () => {
     const value = password_range.value
     characterlength.textContent = value
+    actualizarColorRange()
 })
+// Llamamos a la función para actualizar el color del slider al cargar la página
+actualizarColorRange()
+
+// Función para actualizar el color del slider según su valor
+function actualizarColorRange() {
+    const min = Number(password_range.min)
+    const max = Number(password_range.max)
+    const value = Number(password_range.value)
+    const porcentaje = ((value - min) / (max - min)) * 100
+    password_range.style.background = `linear-gradient(to right, #A4FFAF 0%, #A4FFAF ${porcentaje}%, #18171F ${porcentaje}%, #18171F 100%)`
+}
 
 // Evento para copiar la contraseña al portapapeles al hacer click en el botón de copiar
 copy_btn.addEventListener("click", () => {

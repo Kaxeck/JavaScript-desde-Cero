@@ -124,7 +124,8 @@ input[type="range"]::-webkit-slider-thumb {
 }
 /* Estilo para los inputs de tipo checkbox cuando están seleccionados */
 .opcion-checkbox input[type="checkbox"]:checked {
-    background-color: white;
+    background-color: #A4FFAF;
+    border-color: #A4FFAF;
 }
 /* Estilo para las etiquetas de las opciones de checkbox */
 .opcion-checkbox label {
