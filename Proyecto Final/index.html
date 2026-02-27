@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordic</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/3.0.3/fonts/transformations.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Banner superior con información de envíos, atención al cliente, devoluciones y seguridad de pago -->
+    <header class="top-banner">
+        <div class="grupo-banner">
+            <p>Envios gratis a partir de $499</p>
+            <p>Atencion al cliente 24/7</p>
+            <p>Devoluciones gratis en 30 dias</p>
+            <p>Pago 100% seguro y confiable</p>
+        </div>
+        <div aria-hidden="true" class="grupo-banner">
+            <p>Envios gratis a partir de $499</p>
+            <p>Atencion al cliente 24/7</p>
+            <p>Devoluciones gratis en 30 dias</p>
+            <p>Pago 100% seguro y confiable</p>
+        </div>
+    </header>
+    <!-- Navegación principal con logo, secciones y iconos de búsqueda, carrito y menú para dispositivos móviles -->
+    <nav class="navegacion">
+        <input class="checkbox" type="checkbox" id="menu">
+        <ul class="lista-navegacion">
+            <div class="nav-izq">
+                <li><a href="index.html"><img src="img/Logo.png" alt="Logo de Nordic" class="logo-img"></a></li>
+                <div class="contenedor-navsection">
+                    <li class="seccion-nav"><a href="index.html#promociones">Promociones</a></li>
+                    <li class="seccion-nav"><a href="index.html#catalogo">Catalogo</a></li>
+                    <li class="seccion-nav"><a href="index.html#ideas">Ideas</a></li>
+                </div>
+            </div>
+            <div class="nav-der">
+                <li><a href="#buscar"><i class='bx bx-search'></i> </a></li>
+                <li><a href="#carrito"><i class='bx bx-cart'></i> </a></li>
+                <li class="icono-menu">
+                    <label class="menu-label" for="menu"><i class='bx bx-menu'></i></label>
+                </li>
+            </div>
+        </ul>
+    </nav>
+    <main>
+        <!-- Sección de producto -->
+        <section class="home_section espacio_lateral" id="detalle-producto">
+            <!-- Vista del producto con imagen -->
+            <div class="producto-vista">
+                <img src="img/Sofa Moderno.png" alt="Sofa Moderno" class="home-img">
+            </div>
+            <!-- Información del producto -->
+            <div class="producto-info">
+                <h1>Sofa Moderno</h1>
+                <div class="precios">
+                    <span class="precios-original">$800</span>
+                    <span class="precios-descuento">$600</span>
+                </div>
+                <!-- Descripción del producto -->
+                <p>
+                    Descubre la elegancia y comodidad del Sofa Moderno, diseñado para transformar tu sala de estar en un
+                    espacio acogedor y sofisticado. Con su diseño contemporáneo y líneas limpias, este sofá es perfecto
+                    para cualquier estilo de decoración. Fabricado con materiales de alta calidad, ofrece una
+                    experiencia de asiento excepcionalmente cómoda. 
+                </p>
+                <!-- Botón de agregar al carrito-->
+                <button>
+                    <i class='bx bx-cart'></i> Agregar al Carrito
+                </button>
+            </div>
+        </section>
+        <!-- Sección de comentarios -->
+        <section class="caja-de-comentarios">
+            <h1>Caja de comentarios</h1>
+            <!-- Formulario para enviar un comentario -->
+            <form class="commentario-formulario" action="">
+                <label for="comentario">Comentario:</label>
+                <textarea
+                    id="comentario"
+                    name="comentario"
+                    rows="4"
+                    placeholder="Escribe tu comentario aquí..."
+                ></textarea>
+                <button type="submit">Enviar comentario</button>
+            </form>
+            <!-- Mensaje después de enviar un comentario -->
+            <p id="mensaje"></p>
+            <!-- Contenedor para comentarios enviados -->
+            <div class="comentarios"></div>
+        </section>
+    </main>
+
+    <footer>
+        <aside class="newsletter">
+            <h2 class="txt-newsletter">
+                <span>Suscríbete a</span>
+                <span>nuestro Newsletter</span>
+            </h2>
+            <div class="contenedor-newsletter">
+                <form class="form-suscripcion">
+                    <label for="">Correo Electrónico:</label>
+                    <div class="contenedor-form-suscripcion">
+                        <input type="email" placeholder="Deja tu correo">
+                        <button type="submit">Suscribirse</button>
+                    </div>
+                </form>
+            </div>
+        </aside>
+
+        <div class="contactanos-pagos">
+            <!-- Sección de información con enlaces -->
+            <section>
+                <h3>Informacion</h3>
+                <ul class="lista-informacion">
+                    <li><a href="https://www.google.com/" target="_blank">Terminos y Condiciones</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank">Politica de Privacidad</a></li>
+                    <li><a href="https://www.wikipedia.org/" target="_blank">Envios y Devoluciones</a></li>
+                    <li><a href="https://www.amazon.com.mx/" target="_blank">Sobre Nosotros</a></li>
+                </ul>
+            </section>
+            <!-- Sección de redes sociales -->
+            <section>
+                <h3>Siguenos</h3>
+                <ul class="listas-footer">
+                    <li><a href="#" target="_blank"><i class='bxl bx-facebook-circle bx-sm'></i></a></li>
+                    <li><a href="#" target="_blank"><i class='bxl bx-instagram bx-sm'></i></a></li>
+                    <li><a href="#" target="_blank"><i class='bxl bx-tiktok bx-sm'></i></a></li>
+                    <li><a href="#" target="_blank"><i class='bxl bx-twitter-x bx-sm'></i></a></li>
+                </ul>
+            </section>
+            <!-- Sección de métodos de pago -->
+            <section>
+                <h3>Metodos de pago</h3>
+                <ul class="listas-footer">
+                    <li><i class='bxl bx-visa bx-md'></i> Visa</li>
+                    <li><i class='bxl bx-mastercard bx-md'></i> Mastercard</li>
+                    <li><i class='bxl bx-paypal bx-md'></i> PayPal</li>
+                    <li><i class='bxl bx-amex bx-md'></i> American Express</li>
+                </ul>
+            </section>
+        </div>
+        <!-- Sección de derechos reservados -->
+        <section>
+            <p>Derechos reservados © 2025 Muebles Nordic</p>
+        </section>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>

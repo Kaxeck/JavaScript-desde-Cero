@@ -1,0 +1,899 @@
+/* Etiquetas global
+    - Elimina márgenes y padding por defecto
+    - Aplica box-sizing: border-box para que el ancho incluya padding/border
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Se define un color de fondo claro para una apariencia limpia */
+body {
+    background-color: #F5F7FA;
+}
+
+/* Se define el color de fondo del header */
+header {
+    background-color: white;
+}
+
+/* Se define el color de fondo del footer */
+footer {
+    background-color: #34495E;
+}
+
+/* Estilos para los encabezados h1, h2 y h3 */
+h1,
+h2,
+h3 {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Estilos para párrafos, botones y listas */
+p,
+button,
+li
+{
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+}
+
+/* Estilos específicos para h1 */
+h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Estilos específicos para h2 */
+h2 {
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Estilos específicos para h3 */
+h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Estilos para el banner superior */
+/* overflow hidden para evitar la barra de scroll */
+.top-banner {
+    background-color: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 13px 0px;
+    display: flex;
+    overflow: hidden;
+}
+
+/* Estilos para el texto dentro del banner superior */
+.top-banner p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Contenedor del grupo de texto */
+/* Animación para el texto del banner superior */
+.grupo-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin 50s linear infinite;
+}
+
+/* Estilos para los párrafos dentro del banner superior */
+/* Cada párrafo ocupa el 100% del ancho de la ventana */
+.grupo-banner p {
+    flex: 0 0 80vw;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+/* Animación para el texto del banner superior */
+@keyframes spin {
+    from {
+        translate: 0;
+    }
+
+    to {
+        translate: -100%;
+    }
+}
+
+/* Estilos para la barra de navegación
+    - Se hace sticky para que permanezca visible al hacer scroll
+    - Se aplica un z-index alto para que esté por encima de otros elementos
+    - Se centra el contenido y se limita el ancho máximo
+*/
+.navegacion {
+    background-color: white;
+    padding: 15px 25px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Se eliminan los estilos por defecto de la lista de navegación */
+.lista-navegacion {
+    list-style: none;
+    /* Agregando Flexbox */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Se estilizan los enlaces para que no tengan subrayado y tengan un color específico */
+.lista-navegacion a {
+    text-decoration: none;
+    color: #34495E;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* Icono de menu oculto por defecto */
+.icono-menu {
+    display: none;
+    color: #34495E;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* Checkbox oculto para el menu hamburguesa */
+.checkbox {
+    display: none;
+}
+
+/* Contenedor de las secciones en la barra de navegación */
+.contenedor-navsection {
+    display: flex;
+    gap: 30px;
+}
+
+.menu-label {
+    display: flex;
+}
+
+/* Contenedores de navegación izquierda*/
+.nav-izq {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Contenedores de navegación derecha*/
+.nav-der {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Tamaño de los iconos en la navegación */
+.nav-der i {
+    font-size: 34px;
+}
+
+/* Estilo para imagen de logo */
+.logo-img {
+    width: 120px;
+}
+
+/* Contenedor con espacio lateral automático y ancho máximo */
+.espacio_lateral {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+    text-align: center;
+}
+
+/* Seccion home */
+/* Ajuste de padding para la sección de inicio */
+.home_section {
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Estilo para los títulos h3 dentro de la sección de inicio */
+.home_section h3 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/* Estilo para imagen de home */
+.home-img {
+    width: 100%;
+}
+
+/* Contenedor de precios dentro de la tarjeta de producto */
+.precios {
+    text-align: left;
+    margin-left: 1rem;
+    height: 50px;
+}
+
+/* Estilo de precios original 
+    - Texto tachado para indicar precio anterior
+    - Color gris claro
+*/
+.precios-original {
+    display: block;
+    text-decoration: line-through;
+    font-family: "Inter", sans-serif;
+    color: #95A5A6;
+    margin-right: 1rem;
+}
+
+/* Estilo de precios con descuento 
+    - Texto en negrita para resaltar el precio actual
+    - Color oscuro para resaltar
+*/
+.precios-descuento {
+    display: block;
+    font-family: "Poppins", sans-serif;
+    color: #2C3E50;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+/* Seccion pies de pagina */
+/* Margen y padding para secciones de footer */
+footer section {
+    margin: 10px 10px 0px 10px;
+    padding: 10px 10px 20px 10px;
+}
+
+/* Color blanco para textos en el footer */
+footer h2,
+footer h3,
+footer p {
+    color: white;
+}
+
+/* Estilos para la sección de newsletter 
+    - Fondo de color azul verdoso
+    - Uso de Flexbox para distribuir el contenido
+    - Alineación space-between para separar texto y formulario
+    - justify-content center para centrar verticalmente el contenido
+*/
+.newsletter {
+    background-color: #65D8BC;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Estilos para el texto de la newsletter 
+    - Uso de Flexbox para organizar el texto en columna
+    - Alineación a la izquierda
+    - Justificación centrada verticalmente
+*/
+.txt-newsletter {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    margin: 10px;
+    height: 136px;
+}
+
+/* Estilos para el formulario de suscripción 
+    - Uso de Flexbox para organizar los elementos en columna
+    - Alineación a la izquierda
+    - Justificación centrada verticalmente
+*/
+.form-suscripcion {
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    height: 136px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Estilos para los inputs dentro del formulario de suscripción */
+.form-suscripcion input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+/* Estilos para el botón dentro del formulario de suscripción */
+.form-suscripcion button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+/* Efecto hover para el botón del formulario de suscripción */
+.form-suscripcion button:hover {
+    background-color: #2C3E50;
+}
+
+/* Estilos para las etiquetas dentro del formulario de suscripción */
+.form-suscripcion label {
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Estilos para las listas dentro del footer 
+    - Uso de Flexbox para organizar los elementos en fila
+    - Espacio de 20px entre los elementos
+*/
+.listas-footer {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilos para los elementos de las listas y enlaces dentro del footer 
+    - Uso de Flexbox para alinear iconos y texto
+    - Justificación centrada verticalmente    
+*/
+.listas-footer li,
+a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+}
+
+/* Estilos para la lista de informacion dentro del footer */
+.lista-informacion {
+    list-style: none;
+}
+
+/* Estilos para los enlaces dentro de la lista de informacion 
+    - Uso de Flexbox para alinear iconos y texto
+    - Justificación centrada verticalmente    
+*/
+.lista-informacion a {
+    margin-bottom: 10px 0px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0px;
+}
+
+/* Contenedor para las secciones de contactanos y metodos de pago 
+    - Uso de Flexbox para organizar los elementos en fila
+    - Espacio distribuido entre los elementos
+    - Alineación centrada verticalmente
+*/
+.contactanos-pagos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Se agregan los nuevos estilos para la pagina de producto */
+#detalle-producto {
+    padding-top: 3rem;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Contenedor para la vista del producto */ 
+.producto-vista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #34495E 0%, white 50%);
+    border: 1px solid #E0E0E0;
+    border-radius: 1rem;
+    min-height: 520px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la imagen dentro de la vista del producto */
+.producto-vista .home-img {
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 500px;
+    object-fit: cover;
+}
+
+/* Contenedor para la información del producto */    
+.producto-info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 620px;
+}
+
+/* Estilos para el título del producto */
+.producto-info h1 {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    color: #2C3E50;
+    line-height: 1.15;
+}
+
+/* Contenedor para los precios del producto */
+.producto-info .precios {
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para el precio original del producto */
+.precios-original {
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+/* Estilos para el precio con descuento del producto */
+.precios-descuento {
+    display: inline-block;
+    font-size: 2rem;
+}
+
+/* Estilos para la descripción del producto */
+.producto-info p {
+    margin-bottom: 2rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 56ch;
+}
+
+/* Estilos para el botón de compra del producto */
+.producto-info button {
+    background-color: #2C3E50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+    width: fit-content;
+}
+
+/* Efecto hover para el botón de compra del producto */
+.producto-info button:hover {
+    background-color: #34495E;
+}
+
+/* Estilos para la seccion de comentarios */
+/* Estilos para el título de la caja de comentarios */
+.caja-de-comentarios h1 {
+    text-align: center;
+    background-color: #2C3E50;
+    color: #ffffff;
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 10px 10px 0 0;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+
+}
+/* Estilos para el contenedor principal de la caja de comentarios */
+.caja-de-comentarios {
+    display: flex;
+    width: 100%;
+    margin-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #bfdbfe;
+    box-shadow: 0 10px 24px rgba(30, 64, 175, 0.15);
+}
+/* Estilos para el contenedor de los comentarios */
+.comentarios {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 300px;
+    margin: 20px 0;
+    background-color: #e2e8f0;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: scroll;
+}
+/* Estilos para el formulario de comentarios */
+.commentario-formulario {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+}
+/* Estilos para las etiquetas del formulario */
+.commentario-formulario label {
+    font-weight: 600;
+    color: #0f172a;
+    font-family: "Inter", sans-serif;
+}
+/* Estilos para el área de texto del formulario */
+.commentario-formulario textarea {
+    width: 100%;
+    resize: vertical;
+    min-height: 100px;
+    border: 1px solid #cbd5e1;
+    background-color: #ffffff;
+    color: #1f2937;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: "Inter", sans-serif;
+    margin-right: 10px;
+}
+/* Estilos para el botón del formulario */
+.commentario-formulario button {
+    align-self: flex-end;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+    background-color: #2C3E50;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+/* Estilos para el botón del formulario al pasar el mouse por encima */
+.commentario-formulario button:hover {
+    background-color: #34495E;
+}
+/* Estilos para el mensaje que se muestra después de enviar un comentario */
+#mensaje {
+    width: 90%;
+    min-height: 20px;
+    color: #166534;
+    font-weight: 600;
+    margin-top: 8px;
+}
+/* Estilos para cada caja de comentario individual */
+#comentario-box {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Inter", sans-serif;
+}
+/* Estilo para el contenedor de usuario dentro de cada caja de comentario */
+.usuario {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+}
+/* Estilo para el nombre de usuario dentro de cada caja de comentario */
+.nombre-usuario {
+    font-weight: 600;
+    color: #0f172a;
+}
+/* Estilo para el icono de usuario */
+#icono-usuario {
+    color: #1f2937;
+    border-radius: 100px;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+/* Estilos para los datos dentro de cada caja de comentario */
+#comentario-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: #1f2937;
+    font-size: 0.9rem;
+    flex: 1;
+    min-width: 0;
+}
+/* Estilos para el texto del comentario dentro de cada caja de comentario */
+#comentario-datos p {
+    word-wrap: break-word;
+}
+
+/* Estilos para el botón de eliminar comentario */
+#boton-eliminar {
+    margin: 20px;
+    border: none;
+    background-color: transparent;
+    color: #ef4444;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+}
+
+#boton-responder {
+    margin-left: 20px;
+    border: none;
+    background-color: transparent;
+    color: hsl(130, 100%, 32%);
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+}
+
+
+
+/* Media Queries para diseño responsivo */
+/* Ajustes para pantallas con ancho máximo de 1024px */
+@media screen and (max-width: 1024px) {
+
+    /* Ajustes para el espacio lateral de contenedores */
+    .espacio_lateral {
+        max-width: 95%;
+    }
+
+    /* Mostrar icono de menu */
+    .icono-menu {
+        display: block;
+    }
+
+    /* Ajustes para la barra de navegación */
+    .navegacion {
+        height: 91.5px;
+    }
+
+    /* Contenedor de las secciones en la barra de navegación */
+    /* Ajustes para el menu hamburguesa */
+    /* Posicion inicial del menu */
+    /* Ocultar el contenedor de navegación */
+    .contenedor-navsection {
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 91.5px);
+        flex-direction: column;
+        background-color: #65D8BC;
+        position: absolute;
+        padding: 0px 20px;
+        top: 91.5px;
+        gap: 10px;
+        align-items: start;
+        display: none;
+    }
+
+    /* Cuando el checkbox está marcado, mostrar el contenedor de navegación */
+    .checkbox:checked ~ .lista-navegacion .nav-izq .contenedor-navsection {
+        display: flex;
+    }
+    
+    /* Estilos para las secciones de navegación */
+    .seccion-nav {
+        width: 100%;
+        padding: 10px 0px;
+        border-bottom: 1px solid white;
+    }
+
+    /* Estilos para los enlaces dentro de las secciones de navegación */
+    .seccion-nav a {
+        color: white;
+        font-size: 2.5rem;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+    }
+}
+
+/* Ajustes para pantallas con ancho máximo de 768px */
+@media screen and (max-width: 768px) {
+
+    /* Ajustes para el contenedor del banner superior */
+    .top-banner {
+        padding: 12px 0;
+    }
+
+    /* Ajustes para el texto del banner superior */
+    .top-banner p {
+        font-size: 15px;
+    }
+
+    /* Ajustes para la barra de navegación */
+    .navegacion {
+        padding: 10px 15px;
+        height: 81.5px;
+    }
+    
+    /* Ajustes para el contenedor de las secciones en la barra de navegación */
+    .contenedor-navsection {
+        top: 81.5px;
+        height: calc(100vh - 81.5px);
+    }
+
+    /* Ajustes para los enlaces dentro de las secciones de navegación */
+    .seccion-nav a {
+        font-size: 1.8rem;
+    }
+
+    /* Ajustes para los elementos de navegación */
+    .nav-izq,
+    .nav-der {
+        gap: 15px;
+    }
+
+    /* Tamaño de los iconos en la navegación */
+    .nav-der i {
+        font-size: 30px;
+    }
+
+    /* Ajustes para el espacio lateral de contenedores */
+    .espacio_lateral {
+        max-width: 95%;
+        /* Aprovechar más pantalla en móvil */
+    }
+
+    /* Ajustes para la sección grid de home */
+    .home_section {
+        grid-template-columns: 1fr;
+        gap: 30px 0;
+    }
+
+    /* Ajustes para los títulos h3 dentro de la sección de home */
+    .home_section h3 {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    /* Ajustes para el texto de la sección de newsletter */
+    .newsletter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Ajustes para el contenedor de newsletter */
+    .contenedor-newsletter {
+        width: 95%;
+    }
+
+    /* Ajustes para el formulario de suscripción */
+    .form-suscripcion {
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    /* Ajustes para el contenedor del formulario de suscripción */
+    .contenedor-form-suscripcion {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    /* Ajustes para los inputs de suscripción */
+    .form-suscripcion input {
+        width: 70%;
+        height: 40px;
+        margin-right: 4px;
+        font-size: 1rem;
+    }
+
+    /* Ajustes para el botón de suscripción */
+    .form-suscripcion button {
+        width: 25%;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    /* Ajustes para el contenedor de contactanos y metodos de pago */
+    .contactanos-pagos {
+        align-items: flex-start;
+        margin-right: 1rem;
+    }
+
+    #detalle-producto {
+        gap: 1.5rem;
+    }
+
+    .producto-vista {
+        min-height: auto;
+        padding: 1rem;
+    }
+
+    .producto-info {
+        max-width: 100%;
+}
+}
+
+/* Ajustes para pantallas con ancho máximo de 480px */
+@media screen and (max-width: 480px) {
+
+    /* Ajustes para el texto del banner superior */
+    .top-banner p {
+        font-size: 14px;
+    }
+
+    /* Ajustes para la barra de navegación */
+    .nav-izq,
+    .nav-der {
+        gap: 10px;
+    }
+
+    /* Tamaño de los iconos en la navegación */
+    .nav-der i {
+        font-size: 26px;
+    }
+
+    /* Ajuste de espacion para las secciones de navegación */
+    .seccion-nav {
+        padding: 15px 0px;
+    }
+
+    /* Ajustes para los enlaces dentro de las secciones de navegación */
+    .seccion-nav a {
+        font-size: 1.4rem;
+    }
+
+    /* Ajustes para el formulario de suscripción */
+    .form-suscripcion input {
+        width: 50%;
+        font-size: 0.9rem;
+    }
+
+    /* Ajustes para el botón de suscripción */
+    .form-suscripcion button {
+        width: 50%;
+        font-size: 1rem;
+    }
+
+    /* Ajustes para los elementos de las listas dentro del footer */
+    .listas-footer li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Ajustes para pantallas con ancho máximo de 320px */
+@media screen and (max-width: 320px) {
+
+    /* Ajustes para el contenedor del banner superior */
+    .top-banner {
+        padding: 10px 0;
+    }
+    
+    /* Ajustes para el texto del banner superior */
+    .top-banner p {
+        font-size: 13px;
+    }
+
+    /* Tamaño de los iconos en la navegación */
+    .nav-der i {
+        font-size: 24px;
+    }
+
+    /* Ajustes para los elementos de navegación */
+    .nav-der {
+        gap: 10px; 
+    }
+
+    /* Ajustes para los elementos de las listas dentro del footer */
+    .listas-footer li {
+        font-size: 0.6rem;
+    }
+}
