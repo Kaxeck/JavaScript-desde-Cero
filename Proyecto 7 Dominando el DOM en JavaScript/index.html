@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Basic Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <!-- Filled Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+    <!-- JetBrains Mono Font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Estructura del generador de contraseñas -->
+    <div class="password-generator">
+        <h1>Password Generator</h1>
+        <!-- Campo de texto para mostrar la contraseña generada y botón para copiar -->
+        <div class="grupo-display">
+            <input type="text" id="password-display" placeholder="P4$5W0rD!" readonly>
+            <button id="copy-btn"><i class='bx bx-copy'></i></button>
+        </div>
+        <!-- Opciones para configurar la generación de la contraseña -->
+        <div class="grupo-opciones">
+            <!-- Opción para seleccionar la longitud de la contraseña mediante un control deslizante -->
+            <div class="opcion-range">
+                <div class="opcion-range-header">
+                    <label for="character-length">Character Length:</label>
+                    <span id="character-length-display">10</span>
+                </div>
+                <input type="range" id="character-length" name="character-length" min="1" max="20">
+            </div>
+            <!-- Opciones para incluir diferentes tipos de caracteres -->
+            <div class="opcion-checkbox">
+                <label for="include-uppercase">Include Uppercase Letters</label>
+                <input type="checkbox" id="include-uppercase" name="include-uppercase">
+            </div>
+            <!-- Opción para incluir letras minúsculas -->
+            <div class="opcion-checkbox">
+                <label for="include-lowercase">Include Lowercase Letters</label>
+                <input type="checkbox" id="include-lowercase" name="include-lowercase">
+            </div>
+            <!-- Opción para incluir números -->
+            <div class="opcion-checkbox">
+                <label for="include-numbers">Include Numbers</label>
+                <input type="checkbox" id="include-numbers" name="include-numbers">
+            </div>
+            <!-- Opción para incluir símbolos -->
+            <div class="opcion-checkbox">
+                <label for="include-symbols">Include Symbols</label>
+                <input type="checkbox" id="include-symbols" name="include-symbols">
+            </div>
+            <!-- Medidor de la fortaleza de la contraseña -->
+            <div class="medidor">
+                <span>STRENGTH</span>
+                <!-- Barras que representan la fortaleza de la contraseña -->
+                <div class="medidor-bar">
+                    <i class="bx bx-rectangle-vertical" ></i>
+                    <i class="bx bx-rectangle-vertical" ></i>
+                    <i class="bx bx-rectangle-vertical" ></i>
+                    <i class="bx bx-rectangle-vertical" ></i>
+                </div>
+            </div>
+            <!-- Botón para generar la contraseña -->
+            <button id="generate-btn">GENERATE <i class="bx bx-arrow-right-stroke"></i></button>
+        </div>
+    </div>
+</body>
+</html>
