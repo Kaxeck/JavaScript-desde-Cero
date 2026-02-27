@@ -103,6 +103,20 @@ const fuerza_password = (lowercase, uppercase, numbers, symbols) => {
             iconos[i].style.color = "lightgray"
         }
     }
+    // Cambio de texto según la fuerza de la contraseña
+    const strength_text = document.querySelector(".strength-text")
+    if (fuerza === 1) {
+        strength_text.textContent = "DEBIL"
+    } 
+    else if (fuerza === 2) {
+        strength_text.textContent = "MEDIA"
+    } 
+    else if (fuerza === 3) {
+        strength_text.textContent = "FUERTE"
+    } 
+    else if (fuerza === 4) {
+        strength_text.textContent = "MUY FUERTE"
+    }
 }
 
 // Evento para actualizar el número al lado del slider cuando se mueve

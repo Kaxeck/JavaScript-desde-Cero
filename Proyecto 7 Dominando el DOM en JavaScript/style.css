@@ -145,10 +145,14 @@ input[type="range"]::-webkit-slider-thumb {
 .medidor span {
     font-size: 12px;
     margin-left: 15px;
+    font-family: 'JetBrains Mono', monospace;
 }
 /* Estilo para la barra del medidor de fuerza */
 .medidor-bar {
     margin-right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 /* Estilo para los íconos de la barra del medidor de fuerza */
 .bx-rectangle-vertical {
